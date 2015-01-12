@@ -1,0 +1,15 @@
+Current development version 0.1.4
+
+Version 1
+* Images on map
+* add dependencies automatically
+
+Version 1.0
+* Removed shadowbox
+* Removed history plugin
+* lazy load images to prevent long loading
+* new design
+* removed info page, info to image page
+
+Version 0.1
+* Initial version

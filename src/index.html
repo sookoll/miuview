@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<title>gal</title>
+	<link type="text/css" rel="stylesheet" href="http://sookoll.ee/libs/shadowbox-3.0.3/shadowbox.css">
+	<link type="text/css" rel="stylesheet" href="miuview.css">
+	<script type="text/javascript" src="http://sookoll.ee/libs/jquery/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="http://sookoll.ee/libs/jquery/jquery.history.js"></script>
+	<script type="text/javascript" src="http://sookoll.ee/libs/shadowbox-3.0.3/shadowbox.js"></script>
+	<script type="text/javascript" src="miuview-0.1.4.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			
+            var album = getUrlParameter('album'),
+                request = 'getalbum';
+            if (!album) {
+                return false;
+            }
+            
+            if (album === 'autopark') {
+                var options = {
+                    title:'Autopark',
+                    url:'http://sookoll.ee/test/miil_galerii/api',
+                    request: 'getitem',
+                    album: 'autopark',
+                    key: 'be28c1c33b979e6650f67e7800dc0662'
+                }
+                
+            } else if (album === 'konteinerid') {
+                var options = {
+                    title:'Merekonteinerid',
+                    url:'http://sookoll.ee/test/miil_galerii/api',
+                    request: 'getalbum',
+                    album: '*'
+                }
+            } else {
+                return false;
+            }
+            
+            $('#g').MiuView(options);
+            
+            function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) 
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) 
+                    {
+                        return sParameterName[1];
+                    }
+                }
+                return null;
+            }
+			
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="g"></div>
+</body>
+</html>
