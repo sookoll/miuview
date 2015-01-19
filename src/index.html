@@ -15,7 +15,9 @@
 		$(document).ready(function() {
 			
             var album = getUrlParameter('album'),
-                request = 'getalbum';
+                request = 'getalbum',
+                url = 'http://dev-php/miuview-api/src';
+                //url = 'http://sookoll.ee/test/miil_galerii/api';
             if (!album) {
                 return false;
             }
@@ -23,7 +25,7 @@
             if (album === 'autopark') {
                 var options = {
                     title:'Autopark',
-                    url:'http://sookoll.ee/test/miil_galerii/api',
+                    url: url,
                     request: 'getitem',
                     album: 'autopark',
                     key: 'be28c1c33b979e6650f67e7800dc0662'
@@ -32,7 +34,7 @@
             } else if (album === 'konteinerid') {
                 var options = {
                     title:'Merekonteinerid',
-                    url:'http://sookoll.ee/test/miil_galerii/api',
+                    url: url,
                     request: 'getalbum',
                     album: '*'
                 }
