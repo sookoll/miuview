@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta charset="utf-8">
-	<title>gal</title>
-	<link type="text/css" rel="stylesheet" href="http://sookoll.ee/libs/shadowbox-3.0.3/shadowbox.css">
-	<link type="text/css" rel="stylesheet" href="miuview.css">
-	<script type="text/javascript" src="http://sookoll.ee/libs/jquery/jquery-1.6.2.min.js"></script>
-	<script type="text/javascript" src="http://sookoll.ee/libs/jquery/jquery.history.js"></script>
-	<script type="text/javascript" src="http://sookoll.ee/libs/shadowbox-3.0.3/shadowbox.js"></script>
-	<script type="text/javascript" src="miuview-0.1.4.js"></script>
-	<script type="text/javascript">
-		
-		$(document).ready(function() {
-			
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>gal</title>
+    <link type="text/css" rel="stylesheet" href="vendor/shadowbox-3.0.3/shadowbox.css">
+    <link type="text/css" rel="stylesheet" href="miuview.css">
+</head>
+<body>
+    <div id="g"></div>
+
+    <script type="text/javascript" src="vendor/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.history.js"></script>
+    <script type="text/javascript" src="vendor/shadowbox-3.0.3/shadowbox.js"></script>
+    <script type="text/javascript" src="miuview-0.1.4.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
             var album = getUrlParameter('album'),
                 request = 'getalbum',
                 url = 'http://dev-php/miuview-api/src';
@@ -57,12 +61,9 @@
                 }
                 return null;
             }
-			
-		});
-		
-	</script>
-</head>
-<body>
-	<div id="g"></div>
+
+        });
+
+    </script>
 </body>
 </html>
